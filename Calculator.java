@@ -10,14 +10,15 @@ public class Calculator {
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
     BinaryOperator<Integer> devide = (x, y) -> {
         int i = x / y;
-        if (y != 0) return i;
-        else throw new ArithmeticException();
+        if (y == 0)
+            return 0;
+        else return i;
     };
-
 
     UnaryOperator<Integer> pow = x -> x * x;
     UnaryOperator<Integer> abs = x -> x > 0 ? x : x * -1;
 
     Predicate<Integer> isPositive = x -> x > 0;
     Consumer<Integer> println = System.out::println;
+
 }
