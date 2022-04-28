@@ -9,10 +9,10 @@ public class Calculator {
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
     BinaryOperator<Integer> devide = (x, y) -> {
-        int i = x / y;
         if (y == 0)
             return 0;
-        else return i;
+        else
+            return x / y;
     };
 
     UnaryOperator<Integer> pow = x -> x * x;
